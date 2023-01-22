@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    position: relative;
+    max-height: calc(100vh - 72px);
+    /* border: 1px solid green; */
+    
+}
+.mobileVideo{
+    display:none;
+}
+.container .text {
+    width: 40%;
+   
+    /* border: 1px solid #000; */
+    padding: 5rem 3rem 1rem 3rem;
+}
+
+.container .text section {
+    padding-top:2rem ;
+    width: 100%;
+    height: calc(100vh - 72px);
+    
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* border: 1px solid red; */
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    
+}
+.heading >*{
+    margin: 0.5rem 0;
+}
+
+
+.container .text section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    font-weight: bolder;
+    /* text gradiennt */
+    background-image: linear-gradient(to right, #c416d1, #b11bd6, #9c21dc, #8427e1, #652de5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.container .text section h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    font-weight: bold;
+    line-height: 3.5rem;
+}
+
+.container .text section p {
+    color: #6B7280;
+
+}
+
+.container .video {
+    position: fixed;
+    top: 9rem;
+    right:5rem;
+    width: 50%;
+    height: 475px;
+    border-radius: 50px;
+    overflow: hidden;
+    /* border:1px solid red; */
+}
+
+/* .container .video div {
+    position: absolute;
+    top: 50px;
+    width: 50%;
+    height: 475px;
+  
+    border-radius: 50px;
+    overflow: hidden;
+}*/
+.container .video video{
+   
+    object-fit: cover;    
+    width: 100%;
+    height:100%;
+} 
+
+
+@media (min-width: 1024px) {
+    .container .text {
+       
+       
+        /* border: 1px solid #000; */
+        padding: 5rem 3rem 1rem 7rem;
+    } 
+}
+
+@media (max-width: 900px) {
+    
+.container .text {
+        width: 100%;
+        padding: 5rem 1rem 1rem 1rem;
+        
+    }
+    .heading{
+        margin-bottom: 2rem !important;
+    }
+    .container .text section{
+        height:auto;
+    }
+    .container .text section h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .mobileVideo{
+        display:flex;
+       
+        height: 400px ;
+        border-radius: 50px;
+        /* border:1px solid red; */
+        overflow: hidden;
+    }
+    .mobileVideo video{
+   
+        object-fit: cover;    
+        width: 100%;
+        height:100%;
+    } 
+    
+   .container .video{
+        display:none;
+   }
+}
